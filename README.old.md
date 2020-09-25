@@ -1,1 +1,0 @@
-# yuta-tsurusaki.github.io
