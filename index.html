@@ -4,14 +4,38 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="theme-color" content="#306998"/>
-    <script type="text/javascript" src="/static/js/index.js"></script>
-    <link rel="stylesheet" href="static/css/main.css">
     <title>Pytest</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="title">Pytest</div>
+      <input type="text" id="kusaHayasuText" onchange="kusa()">
+      <div id="kusaText"></div>
     </div>
+    <script>
+      function kusa() {
+        const url = new URL("http://localhost:5000/api/kusa");
+        const text = document.getElementById("kusaHayasuText").value;
+        const obj = {"text": text};
+        const mode = "cors";
+        const method = "POST";
+        const body = JSON.stringify(obj);
+        const headers = {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        };
+
+        fetch(url, {method, mode, headers, body})
+        .then(res => res.json())
+        .then(json => renderKusaText(json.kusaText))
+        .catch(console.error);
+      }
+
+      function renderKusaText(kusaText) {
+        const e = document.getElementById("kusaText");
+        e.textContent = kusaText;
+      }
+    </script>
   </body>
 </html>
