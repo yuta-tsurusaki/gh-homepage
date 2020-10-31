@@ -1,9 +1,9 @@
+# https://yuta-tsurusaki.github.io/gh-homepage/
 ## はじめに
 友達がflaskでwebアプリ作ってるのをみて自分も触ってみたくなったやつ。
 
 ## これなに
 入力した文字に草生やすだけ。たまにうまく動かないかも(apiがherokuの無料枠で動いてるので)
-https://yuta-tsurusaki.github.io/gh-homepage/
 
 ## なにした
 - Herokuにflask製のapiをデプロイした
