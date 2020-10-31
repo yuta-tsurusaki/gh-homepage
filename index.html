@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="theme-color" content="#306998"/>
     <title>Pytest</title>
+    <script>
+      // herokuを起こす
+      fetch("https://kusa-haeru-api.herokuapp.com/")
+      .then(res => console.log(res.ok))
+      .catch(console.error)
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -15,7 +21,7 @@
     </div>
     <script>
       function kusa() {
-        const url = new URL("http://localhost:5000/api/kusa");
+        const url = new URL("https://kusa-haeru-api.herokuapp.com/api/kusa");
         const text = document.getElementById("kusaHayasuText").value;
         const obj = {"text": text};
         const mode = "cors";
