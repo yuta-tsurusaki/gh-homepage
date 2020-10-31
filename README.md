@@ -11,8 +11,10 @@
 
 ## 参考にした記事
 https://devcenter.heroku.com/articles/getting-started-with-python
+
 https://medium.com/@shalandy/deploy-git-subdirectory-to-heroku-ea05e95fce1f
 
 ## 感想
 Node.jsを触ってるときの感覚に近いけど、Flaskの方が書いてて楽しかった。Pythonはほぼ書いたことないのに不思議。
+
 Python全く触れてこなかったお陰で、Gemfileみたいなやつあるんだ〜とか(Pipfile)、Unicornみたいなやつあるじゃん(gunicorn)とか、そんなことでワクワクできた幸せな時間でした。
